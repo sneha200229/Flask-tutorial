@@ -7,7 +7,12 @@
 </head>
 <body>
     <h1>My first jinja2 experience</h1>
+    {#<p>{{first_name}} {{last_name}}</p>#}
+    <p>{{"Welcome " + first_name | upper}}</p>
     <p>Yes it is nice to meet {{name}}, she has opted for course {{course}},age :{{age}}</p>
+    <p>{{"Welcome"|capitalize}}</p>
+    <p>Original price {{price}}</p>
+    <p>{{course|length}}</p>
     
 </body>
 </html>

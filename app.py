@@ -6,10 +6,12 @@ app=Flask(__name__)
 
 @app.route("/")
 def home():
-    name="Sneha"
-    course="Flask"
+    first_name="Sneha"
+    last_name="Nandedkar"
+    course=["Flask","python","django","fastAPI"]
     age=28
-    return render_template("index.html",name=name,course=course,age=age)
+    price=500
+    return render_template("index.html",course=course,age=age,price=price,first_name=first_name,last_name=last_name)
 
 
 if __name__=="__main__":
