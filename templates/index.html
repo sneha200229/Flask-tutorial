@@ -6,15 +6,18 @@
     <title>JINJA2 INTRO</title>
 </head>
 <body>
-    {%if marks>= 90%}
-    <h2>Grade A</h2>
-    {%elif marks>=75%}
-    <h2>Grade B</h2>
-    {%elif marks>=50%}
-    <h2>Grade C</h2>
-    {%else%}
-    <h1>Fail</h1>
-    {%endif%}    
+  
+
+
+<h1>Courses:</h1>
+{%for course in courses%}
+<li>{{loop.index}}){{course}}</li><!--loop.index0-->
+{% endfor %}
+
+<hr>
+{%for key,value in student.items()%}
+<ol>{{key}} {{value}}</ol>
+{% endfor %}
 
     
 </body>

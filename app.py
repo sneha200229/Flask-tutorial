@@ -1,15 +1,15 @@
 from flask import Flask, render_template
-from uuid import UUID
 
 
 app=Flask(__name__)
 
 @app.route("/")
 def home():
+    courses=['python','react','django']
+    student={"name":"Sneha"}
 
-    is_logged_in=True
-    marks=75
-    return render_template("index.html",is_logged_in=is_logged_in,marks=marks)
+
+    return render_template("index.html",courses=courses,student=student)
 
 
 if __name__=="__main__":
