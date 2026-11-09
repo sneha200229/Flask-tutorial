@@ -5,11 +5,15 @@ app=Flask(__name__)
 
 @app.route("/")
 def home():
-    courses=['python','react','django']
-    student={"name":"Sneha"}
+    return render_template("index.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
-    return render_template("index.html",courses=courses,student=student)
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 if __name__=="__main__":

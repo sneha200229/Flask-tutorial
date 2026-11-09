@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JINJA2 INTRO</title>
-</head>
-<body>
-  
-
-
-<h1>Courses:</h1>
-{%for course in courses%}
-<li>{{loop.index}}){{course}}</li><!--loop.index0-->
-{% endfor %}
-
-<hr>
-{%for key,value in student.items()%}
-<ol>{{key}} {{value}}</ol>
-{% endfor %}
-
-    
-</body>
-</html>
+{% extends "base.html" %}
+{%block content%}
+<h2>Welcome to flask course</h2>
+<p>This is home page</p>
+{% endblock %}
