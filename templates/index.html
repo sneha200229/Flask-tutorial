@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 {%block content%}
 <div class='container'><h2>Welcome to flask course</h2>
-<button onClick="showMsg()" class='btn-solid theme-danger'> Click me</button>
+<button onClick="showMsg()" class='border-red-50 bg-blue-600 px-5'> Click me</button>
+
+<h1 class="text-3xl font-bold underline text-orange-950 bg-red-50">this is home page</h1>
 {#<img src="{{url_for('static', filename="images/shirt.png")}}" alt="shirt">#}
-<p>This is home page</p></div>
-<div class="container">
+<!--<div class="container">
     <div class="row">
         <div class="grid text-center grid-cols-3">course1</div>
         <div class="grid text-center grid-cols-3">course2</div>
         <div class="grid text-center grid-cols-3">course3</div>
-    </div>
+    </div>-->
 
 </div>
 {% endblock %}
