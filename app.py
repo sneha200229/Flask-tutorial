@@ -15,13 +15,12 @@ def about():
 def contact():
     if request.method=="POST":
         name=request.form.get("username")
-        return f"Hello {name}"
-    return render_template("contact.html")
+        email=request.form.get("email")
+        message=request.form["message"] #can give key error#
+        return f"Hello {name}, your email is {email} and message is {message}"
+    return render_template("contact.html",name=name)
 
-@app.route("/search")
-def search():
-    query=request.args.get("query")
-    return f"You searched for:{query}"
+
 
 if __name__=="__main__":
     app.run(debug=True) #once you start application, it will automatically run unless you dont manually end
